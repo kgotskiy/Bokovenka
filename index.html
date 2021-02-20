@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>База відпочинку Боковенька</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Bokovenka</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Інформація" onclick="slowScroll('#main')">Інформація</a>
+      <a href="#" onclick="slowScroll('#overview')" title="Переваги">Переваги</a>
+      <a href="#" onclick="slowScroll('#contacts')" title="Контакти">Зворотній зв'язок</a>
+      <a href="#" onclick="slowScroll('#faq')" title="Відповіді на питання">FAQ</a>
+    </div>
+  </header> 
+  <div id="top">
+    <h1>Bokovenka - </h1>
+    <h3>найкраща база відпочинку!</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Ми працюємо для Вас!</h2>
+      <span>У нас найбільший вибір розваг для відпочинку</span>
+    </div>
+    <div class="text">
+      	<ol>
+ <li>Флайборди та гідроцикли</li>
+ <li>Великий басейн</li>
+ <li>Наявність різних типів номерів:</li>
+</ol>
+<ul>
+ <li>Номера напівлюкс</li>
+ <li>Номера люкс</li>
+ <li>Номера VIP</li>
+</ul>
+    </div>
+  </div>
+  <div id="overview">
+    <h2>Переваги</h2>
+    <h4>відпочинку у нашому комплексі</h4>
+
+    <div class="img">
+      <img src="https://www.teplodar.in.ua/upload/iblock/c69/14_maxi_iki_plus.jpg" alt="">
+      <span>Лазня</span>
+    </div>
+    <div class="img">
+      <img src="http://www.hotelsv.net/wp-content/uploads/2013/02/dsc_0080.jpg" alt="">
+      <span>Затишний ресторан</span>
+    </div>
+  </div>
+
+  <div id="contacts">
+    <center><h5>Зворотній зв'язок</h5></center>
+    <form id="form_input">
+      <label for="name">Ім'я<span>*</span></label><br>
+      <input type="text" placeholder="Введіть ім'я" name="name" id="name"><br>
+      <label for="email">Ваша пошта <span>*</span></label><br>
+			<input type="email" placeholder="Введіть email" name="email" id="email"><br>
+			<label for="message">Текст повідомленя<span>*</span></label><br>
+			<textarea placeholder="Введіть ваше повідомлення" name="message" id="message"></textarea><br>
+			<div id="mess_send" class="btn">Надіслати</div>
+    </form>
+  </div>
+  <div id="faq">
+    <div>
+      <span class="title">Оплата</span><br>
+      <span class="heading">Тарифи</span>
+      <p>Ціна за номер варіюється від 1600 до 2300грн.Додаткові послуги коштують від 300 до 6000грн в залежності від типу послуги.Більш детально можно буде ознайомитися в меня Прайс</p>
+      <span class="heading">Бронювання</span>
+      <p>Через велику завантаженість нашої бази - радимо Вам бронювати відпочинок заздалегіть.</p>
+      <span class="heading">Способи оплати</span>
+      <p>Розрахуватися за послуги нашої бази відпочинку ви можете як готівкою так і найбільш популярними криптовалютами</p>
+    </div>
+    <div>
+      <span class="title">Інформація</span><br>
+      <span class="heading">Наша адреса</span>
+      <p>Район Кудашево, с.Софіївка,
+с / т Маяк</p>
+      <span class="heading">Відпочинок</span>
+      <p>Тут є все, що забажає душа людини, яка знає толк у відпочинку. Окремий світ, неймовірна атмосфера, якого в буквальному сенсі наповнює Вас енергією життя.</p>
+      <span class="heading">Наші послуги</span>
+      <p>Територія обладнана цілодобової парковкою. Ви можете приїжджати до нас, як на самоті, так і великою компанією. Ми допоможемо в організації весіль, ювілеїв, сімейних і дитячих свят, романтичних вечорів, зустрічей випускників, корпоративних вечірок.</p>
+    </div>
+  </div>
+  <hr style="border-width: 2px; border-color: grey;">
+
+  <footer>
+  	</div>
+  	<div>
+  		Усі права захищені &copy; 2021 
+  	</div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function slowScroll(id) {
+      $('html, body').animate({
+        scrollTop: $(id).offset().top
+      }, 500);
+    }
+
+    $(document).on("scroll", function () {
+      if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+      else
+        $("header").attr("class", "fixed");
+    });
+
+
+  </script>
+</body>
+</html>
